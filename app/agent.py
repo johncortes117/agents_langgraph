@@ -1,4 +1,5 @@
 from typing import TypedDict
+from langgraph.graph import StateGraph, START, END
 
 #Define the state of the agent
 class State(TypedDict):
@@ -18,3 +19,18 @@ def node_2(state: State) -> State:
 
 def node_3(state: State) -> State:
     return state
+
+# Define the graph
+
+graph = StateGraph(State)
+graph.add_node("node_1", node_1)
+graph.add_node("node_2", node_2)
+graph.add_node("node_3", node_3)
+
+graph.add_edge(START, "node_1")
+graph.add_edge("node_1", "node_2")
+graph.add_edge("node_2", "node_3")
+graph.add_edge("node_3", END)
+
+
+graph.compile()
