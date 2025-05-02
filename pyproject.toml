@@ -1,16 +1,16 @@
-[project]
+[tool.poetry]
 name = "app"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "johncortes117",email = "stevencortespozo@gmail.com"}
-]
+authors = ["johncortes117 <stevencortespozo@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = [
-]
 
+[tool.poetry.dependencies]
+python = "^3.12"
+langgraph = "^0.4.1"
+langchain-openai = "^0.3.15"
+python-dotenv = "^1.1.0"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
