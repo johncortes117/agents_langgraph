@@ -6,22 +6,14 @@ Simple repository to review and test basic concepts of LangGraph agents.
 
 ### 1. Create Conda Environment
 
-Follow these steps if you don't have the environment set up:
-
-```bash
-conda create -n agents python=3.12
-conda activate agents
-conda install -c conda-forge poetry
-# Optional: Export environment history (already done in environment.yml)
-# conda env export --from-history > environment.yml
-```
-
-If you already have the `environment.yml` file, you can create the environment with:
+The recommended way to create the Conda environment is using the provided `environment.yml` file:
 
 ```bash
 conda env create -f environment.yml
 conda activate agents
 ```
+
+This ensures you have the correct Python version and Poetry installed within the environment.
 
 ### 2. Install Dependencies
 
