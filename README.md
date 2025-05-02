@@ -33,14 +33,10 @@ You can run the agent using the LangGraph development server:
 langgraph dev
 ```
 
-This will start a local server (usually at `http://127.0.0.1:2024`) and provide a link to the LangSmith Studio UI for interacting with the graph.
-
 ### FastAPI Application
 
 Alternatively, run the FastAPI application which exposes the agent via an API endpoint:
 
 ```bash
-uvicorn app.api:app --reload
+fastapi dev app/api.py
 ```
-
-This will start the FastAPI server (usually at `http://127.0.0.1:8000`). You can access the agent's output by visiting `http://127.0.0.1:8000/` in your browser.
